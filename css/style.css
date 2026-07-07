@@ -19,8 +19,8 @@ body {
 }
 
 .forms img {
-    height: 109px;
-    width: 109px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
 }
 .forms {
@@ -36,8 +36,7 @@ body {
     max-width: 600px;
     height: 100%;
     min-height: 550px;
-    max-height: 650px;
-    
+    max-height: 600px;
 
 }
 
@@ -54,16 +53,22 @@ form {
 
 }
 
+label {
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    color: #7c7c7c;
+}
+
 input {
     border-radius: 50px;
     margin-bottom: 20px;
-    height: 35px;
+    height: 50px;
 }
 
-.loginForm {
-    height: 65px;
+.loginInputs {
+    
     border: none;
-    background-color: #D9D9D9;
+    background-color: #e0e0e0;
     padding: 20px;
 
 }
@@ -72,12 +77,15 @@ input {
     display: flex;
     margin-top: 20px;
     width: 100%;
+    white-space: wrap;
+    font-size: 0.8em;
 }
 
 .formPrompts .left {
     width: 50%;
-    display: -inline-flex;
-    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .formPrompts .right {
@@ -93,4 +101,17 @@ input {
     color: #FFFFFF;
     font-weight: bold;
     height: 50px;
+    font-size: 1.1em;
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .loginInputs:hover:not(:focus) {
+        background-color: #c9c9c9;
+        
+    }
+    input:focus {
+        outline: none;
+        color: #414141;
+        
+    }
 }
