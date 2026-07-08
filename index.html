@@ -16,19 +16,44 @@
     <div class="forms">
         <img src="images/Facebook Logo.png">
         <h1>Login</h1>
-        <form id="loginForm">
-            <label for="username">Username</label>
+        
+        <input type="radio" id="toggleSignup" name="log" hidden>
+        <input type=radio name="log" id="toggleLogin" hidden checked>
+
+        
+        <form id="frontdesk1" class="frontdesk">
+            <label for="username" class="loginlabel">Username</label>
             <input type="username" id="username" placeholder="Enter your username" class="loginInputs" autocomplete="off" autofocus="on">
-            <label for="password">Password</label>
+            <label for="password" class="loginlabel">Password</label>
             <input type="password" id="password" placeholder="Enter your password" class="loginInputs">
             <input type="submit" id="login" value="LOGIN" class="submitButton">
             
             <div class="formPrompts">
-                <p class="left">Don't have an account? <a href=""> Sign up</a></p>
-                <a href="" class="right">Forgot password</a>
+                <p class="left">Don't have an account? <label for="toggleSignup" class="logformat">Sign up</label></p>
+                <div class="right">
+                    <a href="">Forgot password</a>
+                </div>
             </div>
         </form>
 
+        <form id="frontdesk2" class="frontdesk">
+            <label for="newusername" class="loginlabel">New username</label>
+            <input type="username" id="newusername" placeholder="Enter your new username" class="loginInputs" autocomplete="off" autofocus="on">
+            <label for="newpassword" class="loginlabel">Password</label>
+            <input type="password" id="newpassword" placeholder="Enter your password" class="loginInputs">
+            <label for="confirmpassword" class="loginlabel">Confirm password</label>
+            <input type="password" id="confirmpassword" placeholder="Re-enter your password" class="loginInputs">
+            <input type="submit" id="login" value="SIGNUP" class="submitButton">
+            
+            <div class="formPrompts">
+                <p class="left">Don't have an account? <label for="toggleLogin" class="logformat">Sign in</label></p>
+                
+                <div class="right">
+                    <a href="">Forgot password</a>
+                </div>
+                
+            </div>
+        </form>
     </div>
 </body>
 </html>
