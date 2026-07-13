@@ -39,7 +39,6 @@ img {
     box-shadow: var(--frame-shadow);
     width: 550px;
     height: 100%;
-    transition: all ease-out 0.15s;
 }
 
 .form__content {
@@ -137,17 +136,13 @@ img {
 }
 
 @media (hover:hover) and (pointer:fine) {
-    .frame__accountSetup:hover {
-        transform: var(--hover-frame);
-        transition: all ease-out 0.15s;
-    }
-    
     .inputs:hover:not(:focus) {
         outline: var(--hover-input);
         
     }
     .button:hover {
         background-color: var(--hover-primary-color);
+        cursor: pointer;
     }
     .form__options label:hover, .form__options a:hover {
         text-decoration: var(--hover-link);
