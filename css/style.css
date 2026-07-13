@@ -1,140 +1,193 @@
+@import url(variable.css);
+@import url(fonts.css);
+
+/*page reset*/
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: "Google Sans", sans-serif;
-
-
+    font-family: "Google Sans";
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #9061A0;
-    padding: 20px;
-    height: 100vh;
-    height: 100dvh;
-    
-}
-
-.forms img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-}
-.forms {
-    display: flex;
-    background-color: #FFFFFF;
     align-items: center;
-    justify-content: center;;
-    flex-direction: column;
+    background-color: var(--page-primary-color);
+    background: var(--page-background-color); 
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px;
-    border-radius: 20px;
-    white-space: nowrap;
-    width: 100%;
-    max-width: 550px;
+    min-width: 368px;
+}
+
+img {
+    height: var(--img-size);
+    border-radius: var(--img-radius);
+    pointer-events: none;
+}
+
+.frame__accountSetup {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--page-secondary-color);
+    border-radius: var(--frame-radius);
+    padding: var(--frame-padding-phone);
+    box-shadow: var(--frame-shadow);
+    width: 550px;
     height: 100%;
-    min-height: 550px;
-    max-height: 600px;
-    box-shadow: 0 0 20px #1212127c;
-
+    transition: all ease-out 0.15s;
 }
 
-h1 {
-    color: #9061A0;
-    font-size: 40px;
-}
-
-.frontdesk {
+.form__content {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--content-gap);
+    height: 100%;
     width: 100%;
-    max-width: 400px;
-
 }
 
-.loginlabel {
-    margin-bottom: 5px;
-    font-size: 0.8em;
-    color: #7c7c7c;
-}
-
-input {
-    border-radius: 50px;
-    margin-bottom: 20px;
-    height: 50px;
-}
-
-.loginInputs {
-    
-    border: none;
-    background-color: #e0e0e0;
-    padding: 20px;
-    
-
-}
-
-.formPrompts {
+#toggleLogin:checked ~ #loginForm {
     display: flex;
-    margin-top: 20px;
-    width: 100%;
-    white-space: wrap;
-    font-size: 0.8em;
 }
 
-.formPrompts .left {
-    width: 50%;
+#toggleSignup:checked ~ #signupForm {
+    display: flex;
+}
+
+.form__titlePage {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--content-gap);
+    font-size: 1.2em;
+    color: var(--title-primary-color);
+    width: 100%;
 }
 
-.formPrompts .right {
-    width: 50%;
+.form__accountSetup {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
 }
 
-.submitButton {
-    margin-top: 20px;
-    border: none;
-    background-color: #9061A0;
-    color: #FFFFFF;
-    font-weight: bold;
-    height: 50px;
+.form__accountSetup .inputs {
+    margin-bottom: var(--content-hg-margin);
+    margin-top: var(--content-sm-margin);
+    border: var(--input-border);
+    background-color: var(--input-primary-color);
+    padding-left: var(--input-padding);
+    padding-right: var(--input-padding);
+    height: var(--input-height-phone);
+    border-radius: var(--input-radius);
+    width: 100%;
+}
+
+.form__accountSetup .labels {
+    color: var(--label-primary-color);
+    font-size: 0.9em;
+}
+
+.form__accountSetup .button {
+    border: var(--btn-border);
+    background-color: var(--btn-primary-color);
+    border-radius: var(--btn-radius);
+    color: var(--btn-text-color);
+    height: var(--btn-height-phone);
+    margin-top: var(--content-lg-margin);
     font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-a {
-    color: #785185;
-    text-decoration: none;
+.form__options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: var(--content-sm-margin);
 }
 
-input:focus {
-        outline: none;
-        color: #414141;
-        
-    }
+.form__options .left {
+    text-align: start;
+    width: 50%;
+}
 
-#toggleSignup:checked ~ #frontdesk2 {display: flex;}
-#toggleLogin:checked ~ #frontdesk1 {display: flex;}
+.form__options label {
+    color: var(--link-primary-color)
+}
 
-.logformat {
-    color: #785185;
+.form__options .right {
+    text-align: end;
+    width: 50%;
+}
+
+
+.inputs:focus {
+    outline: none;
 }
 
 @media (hover:hover) and (pointer:fine) {
-    .loginInputs:hover:not(:focus) {
-        background-color: #c9c9c9;
+    .frame__accountSetup:hover {
+        transform: var(--hover-frame);
+        transition: all ease-out 0.15s;
+    }
+    
+    .inputs:hover:not(:focus) {
+        outline: var(--hover-input);
         
     }
-    .logformat:hover {
-        text-decoration: underline;
+    .button:hover {
+        background-color: var(--hover-primary-color);
+    }
+    .form__options label:hover, .form__options a:hover {
+        text-decoration: var(--hover-link);
+    }
+}
+
+@media (hover:none) and (pointer:coarse) {
+    .inputs:active {
+        outline: var(--hover-input);
+        
+    }
+    .button:active {
+        background-color: var(--hover-primary-color);
+    }
+    .form__options label:active, .form__options a:active {
+        text-decoration: var(--hover-link);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    
+    .form__options {
+        font-size: 0.9em;
     }
 
-    a:hover {
+    .frame__accountSetup {
+        padding: var(--frame-padding-desktop);
+    }
+
+    .form__accountSetup .inputs {
+        height: var(--input-height-desktop);
+        width: 100%;
+    }
     
-    text-decoration: underline;
-}
+    .form__accountSetup .button {
+        height: var(--btn-height-desktop);
+    }
+
+    .form__content {
+        max-width: 500px;
+    }
 }

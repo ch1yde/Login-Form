@@ -1,0 +1,59 @@
+:root {
+    /* page colors */
+    --page-primary-color: #9061a0;
+    --page-background-color: linear-gradient(to bottom, #9061a0, #40224a);
+    --page-secondary-color: #FFFFFF;
+
+    /*content spacing*/
+    --content-gap: 16px;
+    --content-sm-margin: 4px;
+    --content-m-margin: 8px;
+    --content-lg-margin: 12px;
+    --content-hg-margin: 16px;
+
+    /*frame customization*/
+    --frame-radius: 25px;
+    --frame-padding-phone: 16px;
+    --frame-padding-desktop: 24px;
+    --frame-shadow: 0 0 20px #1212127e;
+
+    /*text colors*/
+    --title-primary-color: #9059a2;
+    --title-secondary-color: var(--page-secondary-color);
+    --text-primary-color: #121212;
+    --label-primary-color: #717171;
+    --link-primary-color: #803d97;
+
+    /*button customization*/
+    --btn-radius: 30px;
+    --btn-border: none;
+    --btn-shadow: 0 0 20px #1212127e;
+    --btn-margin: 16px;
+    --btn-primary-color: #9061a0;
+    --btn-text-color: #FFFFFF;
+    --btn-height-phone: var(--input-height-phone);
+    --btn-height-desktop: var(--input-height-desktop);
+
+    
+
+    /*input customization*/
+    --input-border: none;
+    --input-primary-color: #e0e0e0;
+    --input-height-phone: 50px;
+    --input-height-desktop: 60px;
+    --input-padding: 20px;
+    --input-radius: 30px;
+
+    /*logos*/
+    --img-size: 85px;
+    --img-radius: 50%;
+    
+    /*hovers*/
+    --hover-primary-color: #784e86;
+    --hover-input: 2px solid #b4b2b2; 
+    --hover-link: underline;
+    --hover-frame: scale(1.05);
+    --hover-input-border: none;
+} 
+
+

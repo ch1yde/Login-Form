@@ -6,54 +6,69 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-    <link rel="preload" href="images/Facebook Logo.png" as="image">
-    <link rel="icon" href="images/Facebook Logo.png">
+    <link rel="icon" href="images/Facebook Logo.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <title>Login Form</title>
 </head>
-
 <body>
-    <div class="forms">
-        <img src="images/Facebook Logo.png">
-        <h1>Login</h1>
+    
+    <div class="frame__accountSetup">
         
-        <input type="radio" id="toggleSignup" name="log" hidden>
-        <input type=radio name="log" id="toggleLogin" hidden checked>
+        <input type="radio" id="toggleLogin" name="showContent" hidden checked>
+        <input type="radio" id="toggleSignup" name="showContent" hidden>
 
-        
-        <form id="frontdesk1" class="frontdesk">
-            <label for="username" class="loginlabel">Username</label>
-            <input type="username" id="username" placeholder="Enter your username" class="loginInputs" autocomplete="off" autofocus="on">
-            <label for="password" class="loginlabel">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" class="loginInputs">
-            <input type="submit" id="login" value="LOGIN" class="submitButton">
+        <div class="form__content" id="loginForm">
+            <div class="form__titlePage">
+                <img src="images/Facebook Logo.png">
+                <h1>Welcome Back</h1>
+            </div>
             
-            <div class="formPrompts">
-                <p class="left">Don't have an account? <label for="toggleSignup" class="logformat">Sign up</label></p>
+            <form class="form__accountSetup">
+                <label for="username" class="labels">Username</label>
+                <input type="username" class="inputs" id="username" placeholder="Enter your username" autofocus>
+                <label for="password" class="labels">Password</label>
+                <input type="password" class="inputs" id="password" placeholder="Enter your password">
+                <input type="submit" value="LOGIN" class="button">
+            </form>
+
+            <div class="form__options">
+                <div class="left">
+                    <p>Don't have an account? <label for="toggleSignup">Signup</label></p>
+                </div>
+                
                 <div class="right">
                     <a href="">Forgot password</a>
                 </div>
             </div>
-        </form>
+        </div>
 
-        <form id="frontdesk2" class="frontdesk">
-            <label for="newusername" class="loginlabel">New username</label>
-            <input type="username" id="newusername" placeholder="Enter your new username" class="loginInputs" autocomplete="off" autofocus="on">
-            <label for="newpassword" class="loginlabel">Password</label>
-            <input type="password" id="newpassword" placeholder="Enter your password" class="loginInputs">
-            <label for="confirmpassword" class="loginlabel">Confirm password</label>
-            <input type="password" id="confirmpassword" placeholder="Re-enter your password" class="loginInputs">
-            <input type="submit" id="login" value="SIGNUP" class="submitButton">
+        <div class="form__content"  id="signupForm">
+            <div class="form__titlePage">
+                <img src="images/Facebook Logo.png" draggable="false">
+                <h1>Create New Account</h1>
+            </div>
             
-            <div class="formPrompts">
-                <p class="left">Don't have an account? <label for="toggleLogin" class="logformat">Sign in</label></p>
+            <form class="form__accountSetup">
+                <label for="newusername" class="labels">Username</label>
+                <input type="username" class="inputs" id="newusername" placeholder="Enter new username">
+                <label for="newpassword" class="labels">Password</label>
+                <input type="password" class="inputs" id="newpassword" placeholder="Enter new password">
+                <label for="confirmPassword" class="labels">New Password</label>
+                <input type="password" class="inputs" id="confirmPassword" placeholder="Re enter password">
+                <input type="submit" value="SIGNUP" class="button">
+            </form>
+            
+            <div class="form__options">
+                <div class="left">
+                    <p>Don't have an account? <label for="toggleLogin">Login</label></p>
+                </div>
                 
                 <div class="right">
                     <a href="">Forgot password</a>
                 </div>
-                
             </div>
-        </form>
+        </div>
     </div>
+
 </body>
 </html>
